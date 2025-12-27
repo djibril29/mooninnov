@@ -1,0 +1,11 @@
+<svg width="180" height="40" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Moon Icon -->
+  <circle cx="20" cy="20" r="16" fill="#E86B47"/>
+  <circle cx="27" cy="14" r="11" fill="#0a0f1a"/>
+  
+  <!-- Text MOON.INNOV -->
+  <text x="45" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="white">
+    M<tspan fill="#9CA3AF">OON</tspan>.INNOV
+  </text>
+</svg>
+
