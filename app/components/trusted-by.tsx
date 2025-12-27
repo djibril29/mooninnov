@@ -6,25 +6,25 @@ const clients = [
     name: "J-GEN Sénégal", 
     description: "ONG - Droits des femmes",
     href: "https://www.jgen.sn/",
-    logo: "/clients/logo-jgen.png"
+    logo: "public/clients/logo-jgen.png"
   },
   { 
     name: "Aïda Création", 
     description: "E-commerce Mode",
     href: "#",
-    logo: "/clients/logo-aida.jpeg"
+    logo: "public/clients/logo-aida.jpeg"
   },
   { 
     name: "Allemagne Beauty", 
     description: "E-commerce Cosmétiques",
     href: "https://allemagnebeauty.com/",
-    logo: "/clients/allemagne-logo.png"
+    logo: "public/clients/allemagne-logo.png"
   },
   { 
     name: "BTLabs Consulting", 
     description: "Études environnementales",
     href: "#",
-    logo: "/clients/btlabs.png"
+    logo: "public/clients/btlabs.png"
   },
   { 
     name: "Wooma", 
