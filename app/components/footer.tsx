@@ -129,7 +129,7 @@ export function Footer() {
             © {new Date().getFullYear()} Moon.innov. Tous droits réservés.
           </p>
           <p className="text-foreground-secondary text-sm">
-            Transformation digitale en Afrique
+            Fait avec ❤️ à Dakar
           </p>
         </div>
       </div>

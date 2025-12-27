@@ -1,11 +1,12 @@
-import { Sparkles, Globe, ShoppingCart, Code, Megaphone, BarChart3, Settings, Zap, ArrowRight, Target, Eye, Users, Lightbulb } from "lucide-react";
+import { Sparkles, Globe, ShoppingCart, Code, Megaphone, BarChart3, Settings, Zap, ArrowRight, Target, Eye, Users, Lightbulb, ExternalLink } from "lucide-react";
 import { Button } from "@/app/components/button";
 import { Section, SectionHeader } from "@/app/components/section";
-import { ServiceCard, ProjectCard } from "@/app/components/card";
+import { ServiceCard } from "@/app/components/card";
 import { HeroWave } from "@/app/components/hero-wave";
 import { TrustedBy } from "@/app/components/trusted-by";
 import { ProcessSteps } from "@/app/components/process-steps";
 import { CTASection } from "@/app/components/cta-section";
+import { Card } from "@/app/components/card";
 import Link from "next/link";
 
 const missions = [
@@ -75,30 +76,34 @@ const processSteps = [
   },
 ];
 
-const projects = [
+const currentProjects = [
   {
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
-    category: "E-commerce",
-    categoryColor: "blue" as const,
-    title: "Boutique en ligne performante",
-    description: "Plateforme e-commerce évolutive avec intégration des paiements mobiles locaux.",
-    tags: ["E-commerce", "Wave", "Orange Money"],
+    client: "J-GEN Sénégal",
+    type: "ONG - Droits des femmes",
+    services: "Site web • Réseaux sociaux • Communication",
+    link: "https://www.jgen.sn/",
+    color: "from-pink-500/20 to-purple-500/20",
   },
   {
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-    category: "Application Web",
-    categoryColor: "green" as const,
-    title: "Outil de gestion PME",
-    description: "Solution logicielle pour la gestion, le suivi et l'automatisation des processus métier.",
-    tags: ["Gestion", "Automatisation"],
+    client: "Aïda Création",
+    type: "E-commerce Mode",
+    services: "Boutique en ligne • Réseaux sociaux",
+    link: "#",
+    color: "from-amber-500/20 to-orange-500/20",
   },
   {
-    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop",
-    category: "Site Vitrine",
-    categoryColor: "purple" as const,
-    title: "Présence digitale professionnelle",
-    description: "Site vitrine sur mesure pour structurer la présence numérique d'une entreprise.",
-    tags: ["Site Web", "SEO"],
+    client: "Allemagne Beauty",
+    type: "E-commerce Cosmétiques",
+    services: "Site e-commerce • Communication digitale",
+    link: "https://allemagnebeauty.com/",
+    color: "from-rose-500/20 to-pink-500/20",
+  },
+  {
+    client: "BTLabs Consulting",
+    type: "Cabinet d'études",
+    services: "Site vitrine • Présence digitale",
+    link: "#",
+    color: "from-emerald-500/20 to-teal-500/20",
   },
 ];
 
@@ -263,8 +268,59 @@ export default function HomePage() {
         </p>
       </Section>
 
-      {/* Value Proposition */}
+      {/* Current Projects Section */}
       <Section>
+        <div className="flex items-end justify-between mb-12">
+          <SectionHeader
+            title="Projets en cours"
+            description="Les organisations que nous accompagnons actuellement."
+          />
+          <Link
+            href="/portfolio"
+            className="hidden md:inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
+          >
+            Voir tous les projets
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {currentProjects.map((project) => (
+            <Card key={project.client} className={`relative overflow-hidden bg-gradient-to-br ${project.color}`}>
+              <div className="flex items-start justify-between">
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-1">{project.client}</h3>
+                  <p className="text-primary text-sm font-medium mb-3">{project.type}</p>
+                  <p className="text-foreground-muted text-sm">{project.services}</p>
+                </div>
+                {project.link !== "#" && (
+                  <Link
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-xl bg-background/50 backdrop-blur flex items-center justify-center text-white hover:bg-primary transition-colors"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                  </Link>
+                )}
+              </div>
+            </Card>
+          ))}
+        </div>
+
+        <div className="mt-8 text-center md:hidden">
+          <Link
+            href="/portfolio"
+            className="inline-flex items-center gap-2 text-primary font-medium"
+          >
+            Voir tous les projets
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </Section>
+
+      {/* Value Proposition */}
+      <Section background="secondary">
         <SectionHeader
           title="Notre valeur ajoutée"
           description="Ce qui nous différencie dans l'accompagnement de votre transformation digitale."
@@ -281,39 +337,6 @@ export default function HomePage() {
               <p className="text-foreground-muted text-sm">{value.description}</p>
             </div>
           ))}
-        </div>
-      </Section>
-
-      {/* Projects Section */}
-      <Section background="secondary">
-        <div className="flex items-end justify-between mb-12">
-          <SectionHeader
-            title="Nos réalisations"
-            description="Des solutions concrètes déployées pour nos clients."
-          />
-          <Link
-            href="/portfolio"
-            className="hidden md:inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
-          >
-            Voir tous les projets
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
-          ))}
-        </div>
-
-        <div className="mt-8 text-center md:hidden">
-          <Link
-            href="/portfolio"
-            className="inline-flex items-center gap-2 text-primary font-medium"
-          >
-            Voir tous les projets
-            <ArrowRight className="w-4 h-4" />
-          </Link>
         </div>
       </Section>
 

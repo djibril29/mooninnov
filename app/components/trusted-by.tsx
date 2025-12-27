@@ -1,34 +1,78 @@
-import { Building2, Landmark, Leaf, ShoppingBag, Smartphone, Briefcase } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
-const companies = [
-  { name: "Sonatel", icon: Smartphone },
-  { name: "BCEAO", icon: Landmark },
-  { name: "Teranga Foods", icon: Leaf },
-  { name: "Jumia", icon: ShoppingBag },
-  { name: "Wave", icon: Briefcase },
-  { name: "Orange", icon: Building2 },
+const clients = [
+  { 
+    name: "J-GEN Sénégal", 
+    description: "ONG - Droits des femmes",
+    href: "https://www.jgen.sn/",
+    logo: "/clients/jgen-logo.png"
+  },
+  { 
+    name: "Aïda Création", 
+    description: "E-commerce Mode",
+    href: "#",
+    logo: "/clients/aida-creation-logo.png"
+  },
+  { 
+    name: "Allemagne Beauty", 
+    description: "E-commerce Cosmétiques",
+    href: "https://allemagnebeauty.com/",
+    logo: "/clients/allemagne-beauty-logo.png"
+  },
+  { 
+    name: "BTLabs Consulting", 
+    description: "Études environnementales",
+    href: "#",
+    logo: "/clients/btlabs-logo.png"
+  },
+  { 
+    name: "Wooma", 
+    description: "Application Web",
+    href: "#",
+    logo: null
+  },
 ];
 
 export function TrustedBy() {
   return (
-    <div className="py-12 border-y border-border">
+    <div className="py-8">
       <p className="text-center text-foreground-secondary text-sm uppercase tracking-wider mb-8">
         Ils nous font confiance
       </p>
       <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-        {companies.map((company) => {
-          const Icon = company.icon;
-          return (
-            <div
-              key={company.name}
-              className="flex items-center gap-2 text-foreground-muted hover:text-white transition-colors"
-            >
-              <Icon className="w-5 h-5" />
-              <span className="font-medium">{company.name}</span>
-            </div>
-          );
-        })}
+        {clients.map((client) => (
+          <Link
+            key={client.name}
+            href={client.href}
+            target={client.href !== "#" ? "_blank" : undefined}
+            rel={client.href !== "#" ? "noopener noreferrer" : undefined}
+            className="group flex flex-col items-center gap-2 transition-opacity hover:opacity-80"
+          >
+            {client.logo ? (
+              <div className="h-12 w-auto flex items-center justify-center">
+                <Image
+                  src={client.logo}
+                  alt={client.name}
+                  width={120}
+                  height={48}
+                  className="h-10 md:h-12 w-auto object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity"
+                />
+              </div>
+            ) : (
+              <div className="h-12 flex items-center justify-center px-4 py-2 rounded-lg bg-background-card border border-border">
+                <span className="text-foreground-muted font-medium">{client.name}</span>
+              </div>
+            )}
+            <span className="text-foreground-secondary text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+              {client.description}
+            </span>
+          </Link>
+        ))}
       </div>
+      <p className="text-center text-foreground-secondary text-xs mt-8">
+        Gestion globale : plateformes, stratégie de communication, réseaux sociaux
+      </p>
     </div>
   );
 }

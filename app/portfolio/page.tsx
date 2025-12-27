@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Star, ArrowRight, ArrowUpRight, Quote, Sparkles, CheckCircle } from "lucide-react";
+import { Star, ArrowRight, ArrowUpRight, Quote, Sparkles, CheckCircle, ExternalLink } from "lucide-react";
 import { Section, SectionHeader } from "@/app/components/section";
 import { Button } from "@/app/components/button";
 import { Card } from "@/app/components/card";
@@ -11,101 +11,93 @@ import Link from "next/link";
 const categories = [
   { id: "all", name: "Tout" },
   { id: "plateforme", name: "Plateformes" },
+  { id: "ecommerce", name: "E-commerce" },
   { id: "application", name: "Applications" },
-  { id: "communication", name: "Communication" },
 ];
 
 const featuredProject = {
-  image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=800&fit=crop",
-  category: "E-COMMERCE",
-  tech: "Next.js / Node.js / PostgreSQL",
-  title: "Marketplace régionale",
-  description: "Une plateforme e-commerce complète pour connecter producteurs locaux et acheteurs. Intégration des paiements mobiles (Wave, Orange Money), gestion des stocks, suivi des commandes et livraisons. La solution a permis à plus de 150 producteurs de digitaliser leur activité commerciale.",
-  stats: [
-    { value: "150+", label: "Vendeurs" },
-    { value: "10k+", label: "Commandes" },
-    { value: "98%", label: "Satisfaction" },
-  ],
-  results: [
-    "Digitalisation de la vente pour 150+ producteurs",
-    "Intégration complète des paiements mobiles",
-    "Réduction de 40% des délais de livraison",
+  image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1200&h=800&fit=crop",
+  category: "ONG",
+  client: "J-GEN Sénégal",
+  title: "Plateforme & Communication Digitale",
+  description: "J-GEN Women Global Entrepreneurship est une association féministe qui œuvre pour l'élimination des violences basées sur le genre et la promotion des droits des femmes au Sénégal. Nous assurons la gestion globale de leur présence digitale : site web institutionnel, stratégie de communication, gestion des réseaux sociaux et création de contenus.",
+  link: "https://www.jgen.sn/",
+  services: [
+    "Création et maintenance du site web",
+    "Stratégie de communication digitale",
+    "Gestion des réseaux sociaux",
+    "Création de contenus à forte valeur ajoutée",
   ],
 };
 
 const projects = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-    category: "Application Web",
-    categoryColor: "purple" as const,
-    title: "Outil de gestion PME",
-    description: "Solution logicielle pour la gestion des stocks, la facturation et le suivi commercial. Automatisation des processus métier.",
-    tags: ["Gestion", "Automatisation", "Dashboard"],
-    type: "application",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop",
+    category: "E-commerce",
+    categoryColor: "blue" as const,
+    client: "Aïda Création",
+    title: "Boutique E-commerce Mode",
+    description: "Plateforme e-commerce de mode avec gestion des commandes, paiements intégrés et stratégie de communication sur les réseaux sociaux.",
+    tags: ["E-commerce", "Mode", "Social Media"],
+    type: "ecommerce",
+    link: "#",
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
-    category: "Site Vitrine",
-    categoryColor: "blue" as const,
-    title: "Présence digitale ONG",
-    description: "Site institutionnel professionnel avec présentation des projets, collecte de dons et espace partenaires.",
-    tags: ["Site Web", "SEO", "Dons en ligne"],
-    type: "plateforme",
+    image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&h=400&fit=crop",
+    category: "E-commerce",
+    categoryColor: "purple" as const,
+    client: "Allemagne Beauty",
+    title: "Site E-commerce Cosmétiques",
+    description: "Plateforme de vente de produits cosmétiques importés d'Allemagne. Gestion complète de la présence digitale et de la stratégie de communication.",
+    tags: ["E-commerce", "Cosmétiques", "Communication"],
+    type: "ecommerce",
+    link: "https://allemagnebeauty.com/",
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop",
-    category: "Communication",
-    categoryColor: "orange" as const,
-    title: "Stratégie réseaux sociaux",
-    description: "Définition et déploiement d'une stratégie de communication digitale. Création de contenus et animation de communauté.",
-    tags: ["Social Media", "Contenus", "Engagement"],
-    type: "communication",
+    image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&h=400&fit=crop",
+    category: "Site Institutionnel",
+    categoryColor: "green" as const,
+    client: "BTLabs Consulting",
+    title: "Cabinet d'Études Environnementales",
+    description: "Site vitrine professionnel pour un cabinet d'études environnementales et sociales. Présence digitale complète et gestion de la communication.",
+    tags: ["Site Web", "Consulting", "Environnement"],
+    type: "plateforme",
+    link: "#",
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=400&fit=crop",
     category: "Application Web",
-    categoryColor: "green" as const,
-    title: "Plateforme de suivi agricole",
-    description: "Application de collecte de données terrain, géolocalisation des parcelles et génération de rapports automatiques.",
-    tags: ["Suivi", "Mobile", "Rapports"],
+    categoryColor: "orange" as const,
+    client: "Wooma",
+    title: "Mise en relation Ouvriers-Clients",
+    description: "Application web de mise en relation entre ouvriers qualifiés et clients. Développement de la plateforme et accompagnement digital.",
+    tags: ["Application", "Marketplace", "Services"],
     type: "application",
+    link: "#",
   },
-  {
-    id: 5,
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-    category: "E-commerce",
-    categoryColor: "blue" as const,
-    title: "Boutique en ligne artisanat",
-    description: "Plateforme e-commerce avec intégration des paiements locaux et internationaux. Gestion des expéditions.",
-    tags: ["E-commerce", "Paiements", "Logistique"],
-    type: "plateforme",
-  },
-  {
-    id: 6,
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-    category: "Application Web",
-    categoryColor: "purple" as const,
-    title: "Tableau de bord analytique",
-    description: "Dashboard de suivi et d'évaluation avec visualisation des données et génération de rapports.",
-    tags: ["Analytics", "Dashboard", "Reporting"],
-    type: "application",
-  },
+];
+
+const services = [
+  "Création de plateformes digitales",
+  "Gestion de stratégie de communication",
+  "Gestion des réseaux sociaux",
+  "Présence digitale globale",
 ];
 
 const testimonials = [
   {
-    quote: "Moon.innov a su comprendre nos besoins et nous proposer une solution adaptée à notre contexte. L'accompagnement a été exemplaire du début à la fin.",
-    author: "Amadou D.",
-    role: "Directeur, Coopérative agricole",
+    quote: "Moon.innov nous accompagne depuis le début dans notre transformation digitale. Leur compréhension de notre mission et leur expertise nous permettent de toucher plus de femmes et de filles au Sénégal.",
+    author: "J-GEN Sénégal",
+    role: "Women Global Entrepreneurship",
   },
   {
-    quote: "Notre présence digitale a été transformée. Nous avons maintenant une image professionnelle qui reflète vraiment notre engagement.",
-    author: "Mariama S.",
-    role: "Directrice, ONG Education",
+    quote: "Une équipe professionnelle qui comprend les enjeux de l'e-commerce. Notre boutique en ligne et notre présence sur les réseaux sociaux ont considérablement évolué grâce à leur accompagnement.",
+    author: "Allemagne Beauty",
+    role: "E-commerce Cosmétiques",
   },
 ];
 
@@ -131,13 +123,13 @@ export default function PortfolioPage() {
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Des solutions concrètes,
+            Projets en cours,
             <br />
-            <span className="gradient-text">des résultats mesurables.</span>
+            <span className="gradient-text">clients accompagnés.</span>
           </h1>
           
           <p className="text-foreground-muted text-lg md:text-xl max-w-3xl mx-auto mb-10">
-            Découvrez comment nous accompagnons PME, entrepreneurs et organisations dans leur transformation digitale.
+            Découvrez les organisations que nous accompagnons dans leur transformation digitale. Gestion globale de leur présence numérique.
           </p>
           
           <Button href="#projets" variant="primary" size="lg">
@@ -147,8 +139,28 @@ export default function PortfolioPage() {
         </div>
       </section>
 
+      {/* What We Do */}
+      <Section background="secondary">
+        <div className="text-center max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold text-white mb-6">Notre accompagnement</h2>
+          <p className="text-foreground-muted mb-8">
+            Pour chaque client, nous assurons une gestion globale de leur présence digitale :
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {services.map((service) => (
+              <span
+                key={service}
+                className="px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm"
+              >
+                {service}
+              </span>
+            ))}
+          </div>
+        </div>
+      </Section>
+
       {/* Featured Project */}
-      <Section id="projets" background="secondary">
+      <Section id="projets">
         <div className="flex items-center gap-2 text-primary font-medium mb-6">
           <Star className="w-5 h-5 fill-primary" />
           Projet en vedette
@@ -161,6 +173,7 @@ export default function PortfolioPage() {
                 className="absolute inset-0 bg-cover bg-center"
                 style={{ backgroundImage: `url(${featuredProject.image})` }}
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-background-card/80 to-transparent lg:hidden" />
             </div>
             <div className="p-8 lg:p-12 flex flex-col justify-center">
               <div className="flex items-center gap-4 mb-4">
@@ -168,7 +181,7 @@ export default function PortfolioPage() {
                   {featuredProject.category}
                 </span>
                 <span className="text-foreground-muted text-sm">
-                  {featuredProject.tech}
+                  {featuredProject.client}
                 </span>
               </div>
               
@@ -179,33 +192,32 @@ export default function PortfolioPage() {
               <p className="text-foreground-muted leading-relaxed mb-6">
                 {featuredProject.description}
               </p>
-              
-              <div className="flex items-center gap-8 mb-6">
-                {featuredProject.stats.map((stat) => (
-                  <div key={stat.label}>
-                    <div className="text-2xl font-bold text-primary">{stat.value}</div>
-                    <div className="text-foreground-muted text-xs uppercase tracking-wider">
-                      {stat.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
 
-              <div className="space-y-2">
-                {featuredProject.results.map((result) => (
-                  <div key={result} className="flex items-center gap-2 text-foreground-muted text-sm">
+              <div className="space-y-2 mb-6">
+                {featuredProject.services.map((service) => (
+                  <div key={service} className="flex items-center gap-2 text-foreground-muted text-sm">
                     <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                    {result}
+                    {service}
                   </div>
                 ))}
               </div>
+              
+              <Link
+                href={featuredProject.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
+              >
+                Visiter le site
+                <ExternalLink className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         </Card>
       </Section>
 
       {/* Filter Tabs */}
-      <Section>
+      <Section background="secondary">
         <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
           {categories.map((category) => (
             <button
@@ -223,16 +235,17 @@ export default function PortfolioPage() {
         </div>
         
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filteredProjects.map((project) => (
             <div key={project.id} className="group">
               <Card className="overflow-hidden p-0 h-full">
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-[16/10] overflow-hidden">
                   <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
                     style={{ backgroundImage: `url(${project.image})` }}
                   />
-                  <div className="absolute top-4 right-4">
+                  <div className="absolute inset-0 bg-gradient-to-t from-background-card via-transparent to-transparent" />
+                  <div className="absolute top-4 left-4">
                     <span className={`px-3 py-1 text-xs font-medium rounded-full ${
                       project.categoryColor === "blue" ? "bg-primary text-white" :
                       project.categoryColor === "green" ? "bg-emerald-500 text-white" :
@@ -242,17 +255,20 @@ export default function PortfolioPage() {
                       {project.category}
                     </span>
                   </div>
+                  <div className="absolute bottom-4 left-4">
+                    <p className="text-white font-semibold text-lg">{project.client}</p>
+                  </div>
                 </div>
                 <div className="p-5">
                   <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-foreground-muted text-sm leading-relaxed mb-4 line-clamp-2">
+                  <p className="text-foreground-muted text-sm leading-relaxed mb-4">
                     {project.description}
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag) => (
+                      {project.tags.slice(0, 2).map((tag) => (
                         <span
                           key={tag}
                           className="px-2 py-1 text-xs rounded-full bg-background border border-border text-foreground-muted"
@@ -261,9 +277,16 @@ export default function PortfolioPage() {
                         </span>
                       ))}
                     </div>
-                    <div className="w-8 h-8 rounded-lg bg-background-card border border-border flex items-center justify-center text-foreground-muted group-hover:text-primary group-hover:border-primary transition-colors">
-                      <ArrowUpRight className="w-4 h-4" />
-                    </div>
+                    {project.link !== "#" && (
+                      <Link
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-lg bg-background-card border border-border flex items-center justify-center text-foreground-muted group-hover:text-primary group-hover:border-primary transition-colors"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                      </Link>
+                    )}
                   </div>
                 </div>
               </Card>
@@ -273,10 +296,10 @@ export default function PortfolioPage() {
       </Section>
 
       {/* Testimonials Section */}
-      <Section background="secondary">
+      <Section>
         <SectionHeader
-          title="Ils nous font confiance"
-          description="Des organisations satisfaites qui témoignent de notre accompagnement."
+          title="Ils témoignent"
+          description="Retours de nos clients sur notre accompagnement."
           centered
         />
         
@@ -300,8 +323,8 @@ export default function PortfolioPage() {
 
       {/* CTA Section */}
       <CTASection
-        title="Un projet en tête ?"
-        description="Discutons de vos besoins. Nous vous accompagnons de l'idée à la réalisation."
+        title="Vous souhaitez être accompagné ?"
+        description="Discutons de votre projet. Nous assurons la gestion globale de votre présence digitale."
         primaryButtonText="Démarrer un projet"
         primaryButtonHref="/contact"
         variant="default"
