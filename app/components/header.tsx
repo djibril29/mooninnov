@@ -19,11 +19,11 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gray-100 backdrop-blur-xl border-b border-border">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Logo theme="dark" />
+          <Logo theme="light" />
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -35,8 +35,8 @@ export function Header() {
                   href={item.href}
                   className={`text-sm font-medium transition-colors ${
                     isActive
-                      ? "text-primary"
-                      : "text-foreground-muted hover:text-white"
+                      ? "text-black"
+                      : "text-foreground-muted hover:text-blue-500"
                   }`}
                 >
                   {item.name}

@@ -6,25 +6,25 @@ const clients = [
     name: "J-GEN Sénégal", 
     description: "ONG - Droits des femmes",
     href: "https://www.jgen.sn/",
-    logo: "public/clients/logo-jgen.png"
+    logo: "/clients/logo-jgen.png"
   },
   { 
     name: "Aïda Création", 
     description: "E-commerce Mode",
     href: "#",
-    logo: "public/clients/logo-aida.jpeg"
+    logo: "/clients/logo-aida.jpeg"
   },
   { 
     name: "Allemagne Beauty", 
     description: "E-commerce Cosmétiques",
     href: "https://allemagnebeauty.com/",
-    logo: "public/clients/allemagne-logo.png"
+    logo: "/clients/allemagne-logo.png"
   },
   { 
     name: "BTLabs Consulting", 
     description: "Études environnementales",
     href: "#",
-    logo: "public/clients/btlabs.png"
+    logo: "/clients/btlabs.png"
   },
   { 
     name: "Wooma", 
@@ -54,9 +54,9 @@ export function TrustedBy() {
                 <Image
                   src={client.logo}
                   alt={client.name}
-                  width={120}
-                  height={48}
-                  className="h-10 md:h-12 w-auto object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity"
+                  width={500}
+                  height={500}
+                  className="h-10 md:h-12 w-auto object-contain bg-white  group-hover:opacity-100 "
                 />
               </div>
             ) : (
