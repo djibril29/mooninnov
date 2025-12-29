@@ -37,7 +37,7 @@ const clients = [
 export function TrustedBy() {
   return (
     <div className="py-8">
-      <p className="text-center text-foreground-secondary text-sm uppercase tracking-wider mb-8">
+      <p className="text-center text-foreground-secondary text-lg uppercase tracking-wider mb-8">
         Ils nous font confiance
       </p>
       <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
@@ -50,13 +50,13 @@ export function TrustedBy() {
             className="group flex flex-col items-center gap-2 transition-opacity hover:opacity-80"
           >
             {client.logo ? (
-              <div className="h-12 w-auto flex items-center justify-center">
+              <div className="h-12 w-auto flex items-center justify-center py-40">
                 <Image
                   src={client.logo}
                   alt={client.name}
-                  width={500}
-                  height={500}
-                  className="h-10 md:h-12 w-auto object-contain bg-white  group-hover:opacity-100 "
+                  width={1000}
+                  height={1000}
+                  className="h-30 md:h-30 w-auto object-contain bg-white  group-hover:opacity-100"
                 />
               </div>
             ) : (

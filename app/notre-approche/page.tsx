@@ -145,10 +145,7 @@ export default function NotreApprochePage() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <Section background="secondary">
-        <Stats stats={stats} />
-      </Section>
+    
 
       {/* Who we serve */}
       <Section>
