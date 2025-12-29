@@ -1,12 +1,12 @@
-import { Sparkles, Globe, ShoppingCart, Code, Megaphone, BarChart3, Settings, Zap, ArrowRight, Target, Eye, Users, Lightbulb } from "lucide-react";
+import { Sparkles, Globe, Code, Megaphone, BarChart3, Settings, Zap, ArrowRight, Target, Users, Lightbulb } from "lucide-react";
 import { Button } from "@/app/components/button";
 import { Section, SectionHeader } from "@/app/components/section";
 import { ServiceCard, ProjectCard } from "@/app/components/card";
-import { HeroWave } from "@/app/components/hero-wave";
 import { TrustedBy } from "@/app/components/trusted-by";
 import { ProcessSteps } from "@/app/components/process-steps";
 import { CTASection } from "@/app/components/cta-section";
 import Link from "next/link";
+import Image from "next/image";
 
 const missions = [
   {
@@ -102,29 +102,6 @@ const projects = [
   },
 ];
 
-const values = [
-  {
-    icon: <Eye className="w-5 h-5" />,
-    title: "Vision orientée solutions",
-    description: "Pas uniquement techniques, mais stratégiques.",
-  },
-  {
-    icon: <Globe className="w-5 h-5" />,
-    title: "Compréhension des réalités africaines",
-    description: "Des solutions adaptées au contexte local.",
-  },
-  {
-    icon: <Zap className="w-5 h-5" />,
-    title: "Solutions simples et efficaces",
-    description: "Des outils évolutifs qui fonctionnent.",
-  },
-  {
-    icon: <Users className="w-5 h-5" />,
-    title: "Accompagnement humain",
-    description: "Pédagogique et stratégique.",
-  },
-];
-
 export default function HomePage() {
   return (
     <div className="bg-grid">
@@ -138,7 +115,7 @@ export default function HomePage() {
           
           
           {/* Main heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 animate-fade-in-delay-1 pt-10">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-foreground mb-6 animate-fade-in-delay-1 pt-10">
            Donnez vie à vos idées 
             <br />
             <span className="gradient-text">Grâce à nos solutions digitales.</span>
@@ -146,7 +123,7 @@ export default function HomePage() {
           
           {/* Subtitle */}
           <p className="text-foreground-muted text-lg md:text-xl max-w-3xl mx-auto mb-10 animate-fade-in-delay-2">
-            Moon.innov accompagne les PME, entrepreneurs et organisations engagées dans leur transformation digitale pour leur apporter une expertise, de l'innovation et des solutions concrètes, adaptées aux réalités africaines.
+            Moon.innov accompagne les PME, entrepreneurs et organisations engagées dans leur transformation digitale pour leur apporter une expertise, de l&apos;innovation et des solutions concrètes, adaptées aux réalités africaines.
           </p>
           
           {/* CTA Buttons */}
@@ -160,8 +137,8 @@ export default function HomePage() {
             </Button>
           </div>
         </div>
-        <div className=" flex justify-center items-center mt-10 ml-20">
-          <img src="clients/moon.png" alt="Hero Wave" width={1000} height={1000} />
+        <div className="flex justify-center items-center mt-10 ml-20">
+          <Image src="/clients/moon.png" alt="Hero Wave" width={1000} height={1000} priority />
         </div>
       
       </section>
@@ -185,7 +162,7 @@ export default function HomePage() {
               <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mx-auto mb-4">
                 {mission.icon}
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">{mission.title}</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-2">{mission.title}</h3>
               <p className="text-foreground-muted text-sm leading-relaxed">
                 {mission.description}
               </p>
@@ -203,7 +180,7 @@ export default function HomePage() {
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-medium mb-4">
               CE QUE NOUS FAISONS
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
               Des solutions digitales
               <br />
               <span className="gradient-text">pour chaque besoin.</span>
@@ -280,7 +257,7 @@ export default function HomePage() {
         />
         <ProcessSteps steps={processSteps} />
         <p className="text-center text-foreground-muted mt-8 max-w-2xl mx-auto">
-          Chaque projet est pensé comme une <span className="text-white">solution utile, évolutive et alignée</span> avec la vision du client.
+          Chaque projet est pensé comme une <span className="text-foreground">solution utile, évolutive et alignée</span> avec la vision du client.
         </p>
       </Section>
 

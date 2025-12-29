@@ -73,13 +73,13 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Services</h3>
+            <h3 className="text-foreground font-semibold mb-4">Services</h3>
             <ul className="space-y-3">
               {navigationLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-foreground-muted hover:text-white text-sm transition-colors"
+                    className="text-foreground-muted hover:text-primary text-sm transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -90,13 +90,13 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Moon.innov</h3>
+            <h3 className="text-foreground font-semibold mb-4">Moon.innov</h3>
             <ul className="space-y-3">
               {navigationLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-foreground-muted hover:text-white text-sm transition-colors"
+                    className="text-foreground-muted hover:text-primary text-sm transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -107,13 +107,13 @@ export function Footer() {
 
           {/* Legal */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Légal</h3>
+            <h3 className="text-foreground font-semibold mb-4">Légal</h3>
             <ul className="space-y-3">
               {navigationLinks.legal.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-foreground-muted hover:text-white text-sm transition-colors"
+                    className="text-foreground-muted hover:text-primary text-sm transition-colors"
                   >
                     {link.name}
                   </Link>

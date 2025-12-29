@@ -85,7 +85,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-8 md:pt-40 md:pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Parlons de{" "}
             <span className="gradient-text">votre projet.</span>
           </h1>
@@ -102,7 +102,7 @@ export default function ContactPage() {
             {/* Form Section */}
             <div className="lg:col-span-3">
               <Card className="p-6 md:p-8">
-                <h2 className="text-xl font-semibold text-white mb-2">
+                <h2 className="text-xl font-semibold text-foreground mb-2">
                   Décrivez votre projet
                 </h2>
                 <p className="text-foreground-muted text-sm mb-6">
@@ -115,7 +115,7 @@ export default function ContactPage() {
                     <div>
                       <label
                         htmlFor="name"
-                        className="block text-sm font-medium text-white mb-2"
+                        className="block text-sm font-medium text-foreground mb-2"
                       >
                         Votre nom
                       </label>
@@ -127,13 +127,13 @@ export default function ContactPage() {
                         onChange={handleChange}
                         placeholder="Prénom Nom"
                         required
-                        className="w-full px-4 py-3 bg-background border border-border rounded-xl text-white placeholder:text-foreground-secondary focus:outline-none focus:border-primary transition-colors"
+                        className="w-full px-4 py-3 bg-background border border-border rounded-xl text-foreground placeholder:text-foreground-secondary focus:outline-none focus:border-primary transition-colors"
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="company"
-                        className="block text-sm font-medium text-white mb-2"
+                        className="block text-sm font-medium text-foreground mb-2"
                       >
                         Organisation (optionnel)
                       </label>
@@ -144,7 +144,7 @@ export default function ContactPage() {
                         value={formData.company}
                         onChange={handleChange}
                         placeholder="Nom de votre structure"
-                        className="w-full px-4 py-3 bg-background border border-border rounded-xl text-white placeholder:text-foreground-secondary focus:outline-none focus:border-primary transition-colors"
+                        className="w-full px-4 py-3 bg-background border border-border rounded-xl text-foreground placeholder:text-foreground-secondary focus:outline-none focus:border-primary transition-colors"
                       />
                     </div>
                   </div>
@@ -154,7 +154,7 @@ export default function ContactPage() {
                     <div>
                       <label
                         htmlFor="email"
-                        className="block text-sm font-medium text-white mb-2"
+                        className="block text-sm font-medium text-foreground mb-2"
                       >
                         Email
                       </label>
@@ -166,13 +166,13 @@ export default function ContactPage() {
                         onChange={handleChange}
                         placeholder="vous@exemple.com"
                         required
-                        className="w-full px-4 py-3 bg-background border border-border rounded-xl text-white placeholder:text-foreground-secondary focus:outline-none focus:border-primary transition-colors"
+                        className="w-full px-4 py-3 bg-background border border-border rounded-xl text-foreground placeholder:text-foreground-secondary focus:outline-none focus:border-primary transition-colors"
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="phone"
-                        className="block text-sm font-medium text-white mb-2"
+                        className="block text-sm font-medium text-foreground mb-2"
                       >
                         Téléphone / WhatsApp
                       </label>
@@ -183,7 +183,7 @@ export default function ContactPage() {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="+221 77..."
-                        className="w-full px-4 py-3 bg-background border border-border rounded-xl text-white placeholder:text-foreground-secondary focus:outline-none focus:border-primary transition-colors"
+                        className="w-full px-4 py-3 bg-background border border-border rounded-xl text-foreground placeholder:text-foreground-secondary focus:outline-none focus:border-primary transition-colors"
                       />
                     </div>
                   </div>
@@ -193,7 +193,7 @@ export default function ContactPage() {
                     <div>
                       <label
                         htmlFor="projectType"
-                        className="block text-sm font-medium text-white mb-2"
+                        className="block text-sm font-medium text-foreground mb-2"
                       >
                         Type de projet
                       </label>
@@ -202,7 +202,7 @@ export default function ContactPage() {
                         name="projectType"
                         value={formData.projectType}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-background border border-border rounded-xl text-white focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer"
+                        className="w-full px-4 py-3 bg-background border border-border rounded-xl text-foreground focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer"
                         style={{
                           backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
                           backgroundRepeat: "no-repeat",
@@ -220,7 +220,7 @@ export default function ContactPage() {
                     <div>
                       <label
                         htmlFor="budget"
-                        className="block text-sm font-medium text-white mb-2"
+                        className="block text-sm font-medium text-foreground mb-2"
                       >
                         Budget indicatif
                       </label>
@@ -229,7 +229,7 @@ export default function ContactPage() {
                         name="budget"
                         value={formData.budget}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-background border border-border rounded-xl text-white focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer"
+                        className="w-full px-4 py-3 bg-background border border-border rounded-xl text-foreground focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer"
                         style={{
                           backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
                           backgroundRepeat: "no-repeat",
@@ -250,7 +250,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-medium text-white mb-2"
+                      className="block text-sm font-medium text-foreground mb-2"
                     >
                       Décrivez votre projet
                     </label>
@@ -262,7 +262,7 @@ export default function ContactPage() {
                       placeholder="Parlez-nous de votre activité, vos objectifs, les défis que vous souhaitez relever grâce au digital..."
                       rows={5}
                       required
-                      className="w-full px-4 py-3 bg-background border border-border rounded-xl text-white placeholder:text-foreground-secondary focus:outline-none focus:border-primary transition-colors resize-none"
+                      className="w-full px-4 py-3 bg-background border border-border rounded-xl text-foreground placeholder:text-foreground-secondary focus:outline-none focus:border-primary transition-colors resize-none"
                     />
                   </div>
 
@@ -279,7 +279,7 @@ export default function ContactPage() {
             <div className="lg:col-span-2 space-y-6">
               {/* Contact Info */}
               <Card>
-                <h3 className="text-lg font-semibold text-white mb-2">Contact direct</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-2">Contact direct</h3>
                 <p className="text-foreground-muted text-sm mb-6">
                   Vous préférez échanger de vive voix ? Nous sommes disponibles.
                 </p>
@@ -298,7 +298,7 @@ export default function ContactPage() {
                       </div>
                       <div className="flex-1 min-w-0">
                         <p className="text-foreground-muted text-xs mb-0.5">{item.label}</p>
-                        <p className="text-white font-medium group-hover:text-primary transition-colors">
+                        <p className="text-foreground font-medium group-hover:text-primary transition-colors">
                           {item.value}
                         </p>
                         <p className="text-foreground-secondary text-xs">{item.subtext}</p>
@@ -340,7 +340,7 @@ export default function ContactPage() {
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="text-white font-semibold mb-1">Réponse rapide</h4>
+                    <h4 className="text-foreground font-semibold mb-1">Réponse rapide</h4>
                     <p className="text-foreground-muted text-sm">
                       Nous revenons vers vous sous 24h avec une première analyse de votre projet.
                     </p>
@@ -351,11 +351,11 @@ export default function ContactPage() {
               {/* Testimonial */}
               <Card>
                 <Quote className="w-6 h-6 text-primary mb-4" />
-                <p className="text-white italic leading-relaxed mb-4">
+                <p className="text-foreground italic leading-relaxed mb-4">
                   &quot;{testimonial.quote}&quot;
                 </p>
                 <p className="text-foreground-muted text-sm">
-                  — <span className="text-white font-medium">{testimonial.author}</span>, {testimonial.role}
+                  — <span className="text-foreground font-medium">{testimonial.author}</span>, {testimonial.role}
                 </p>
               </Card>
             </div>

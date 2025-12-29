@@ -30,7 +30,7 @@ export function ProcessSteps({ steps, variant = "horizontal" }: ProcessStepsProp
               {step.icon}
             </div>
             
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-lg font-semibold text-foreground mb-2">
               {step.number && <span className="text-primary">{step.number}. </span>}
               {step.title}
             </h3>
@@ -57,7 +57,7 @@ export function ProcessSteps({ steps, variant = "horizontal" }: ProcessStepsProp
             {step.icon}
           </div>
           
-          <h3 className="text-base font-semibold text-white mb-2">{step.title}</h3>
+          <h3 className="text-base font-semibold text-foreground mb-2">{step.title}</h3>
           
           <p className="text-foreground-muted text-sm leading-relaxed max-w-xs">
             {step.description}
@@ -67,4 +67,3 @@ export function ProcessSteps({ steps, variant = "horizontal" }: ProcessStepsProp
     </div>
   );
 }
-
