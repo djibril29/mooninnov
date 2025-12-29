@@ -1,17 +1,9 @@
-import { Search, Users, Code, Rocket, Target, Eye, Zap, Heart, Globe, CheckCircle, Lightbulb } from "lucide-react";
+import { Search, Users, Rocket, Target, Eye, Zap, Heart, Globe, CheckCircle, Lightbulb } from "lucide-react";
 import { Section, SectionHeader } from "@/app/components/section";
 import { Button } from "@/app/components/button";
 import { ProcessSteps } from "@/app/components/process-steps";
 import { TeamCard, Card } from "@/app/components/card";
-import { Stats } from "@/app/components/stats";
 import { CTASection } from "@/app/components/cta-section";
-
-const stats = [
-  { value: "100+", label: "Projets Réalisés" },
-  { value: "95%", label: "Clients Satisfaits" },
-  { value: "50+", label: "PME Accompagnées" },
-  { value: "15", label: "Secteurs Couverts" },
-];
 
 const processSteps = [
   {
@@ -124,14 +116,14 @@ export default function NotreApprochePage() {
             Notre Approche
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             Plus qu&apos;un prestataire,
             <br />
             <span className="gradient-text">un partenaire digital.</span>
           </h1>
           
           <p className="text-foreground-muted text-lg md:text-xl max-w-3xl mx-auto mb-10">
-            Chez Moon.innov, nous ne livrons pas simplement des outils digitaux. Nous adoptons une <span className="text-white">approche globale et stratégique</span>, centrée sur vos besoins réels et vos objectifs.
+            Chez Moon.innov, nous ne livrons pas simplement des outils digitaux. Nous adoptons une <span className="text-foreground">approche globale et stratégique</span>, centrée sur vos besoins réels et vos objectifs.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -161,7 +153,7 @@ export default function NotreApprochePage() {
               <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mx-auto mb-4">
                 {audience.icon}
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">{audience.title}</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-2">{audience.title}</h3>
               <p className="text-foreground-muted text-sm leading-relaxed">
                 {audience.description}
               </p>
@@ -180,7 +172,7 @@ export default function NotreApprochePage() {
         
         <div className="mt-12 text-center">
           <Card className="inline-block bg-primary/5 border-primary/20 max-w-2xl">
-            <p className="text-white text-lg">
+            <p className="text-foreground text-lg">
               Chaque projet est pensé comme une <span className="text-primary font-semibold">solution utile, évolutive et alignée</span> avec la vision du client.
             </p>
           </Card>
@@ -203,7 +195,7 @@ export default function NotreApprochePage() {
                     {value.icon}
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold mb-1">{value.title}</h3>
+                    <h3 className="text-foreground font-semibold mb-1">{value.title}</h3>
                     <p className="text-foreground-muted text-sm leading-relaxed">
                       {value.description}
                     </p>
@@ -222,7 +214,7 @@ export default function NotreApprochePage() {
                 }}
               />
               <div className="p-6 bg-background-card">
-                <h3 className="text-white font-semibold mb-1">Un hub de création</h3>
+                <h3 className="text-foreground font-semibold mb-1">Un hub de création</h3>
                 <p className="text-foreground-muted text-sm">Expertise, innovation et solutions concrètes.</p>
               </div>
             </Card>
@@ -238,11 +230,11 @@ export default function NotreApprochePage() {
       <Section background="secondary">
         <div className="text-center max-w-4xl mx-auto">
           <p className="text-primary text-sm font-medium uppercase tracking-wider mb-4">Notre vision</p>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-6">
             Contribuer activement à la transformation numérique en Afrique
           </h2>
           <p className="text-foreground-muted text-lg leading-relaxed mb-6">
-            En accompagnant les entreprises et les initiatives locales vers des usages digitaux <span className="text-white font-medium">innovants</span>, <span className="text-white font-medium">durables</span> et <span className="text-white font-medium">créateurs de valeur</span>.
+            En accompagnant les entreprises et les initiatives locales vers des usages digitaux <span className="text-foreground font-medium">innovants</span>, <span className="text-foreground font-medium">durables</span> et <span className="text-foreground font-medium">créateurs de valeur</span>.
           </p>
           <p className="text-foreground-secondary italic">
             Moon.innov aspire à devenir un acteur de référence dans la création de solutions digitales adaptées au contexte africain.

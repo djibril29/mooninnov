@@ -30,7 +30,7 @@ export function CTASection({
             
             <div className="relative z-10 py-12 md:py-16 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="text-center md:text-left">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
                   {title}
                 </h2>
                 <p className="text-foreground-muted text-lg max-w-xl">
@@ -63,7 +63,7 @@ export function CTASection({
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
         </div>
         
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
           {title}
         </h2>
         <p className="text-foreground-muted text-lg max-w-2xl mx-auto mb-8">
@@ -89,4 +89,3 @@ export function CTASection({
     </section>
   );
 }
-

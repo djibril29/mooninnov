@@ -26,8 +26,8 @@ export function Button({
   
   const variants = {
     primary: "bg-primary hover:bg-primary-hover text-white",
-    secondary: "bg-background-card hover:bg-border text-white border border-border",
-    outline: "bg-transparent hover:bg-white/5 text-white border border-border hover:border-primary",
+    secondary: "bg-background-card hover:bg-border text-foreground border border-border",
+    outline: "bg-transparent hover:bg-background-secondary text-foreground border border-border hover:border-primary",
   };
   
   const sizes = {
@@ -57,4 +57,3 @@ export function Button({
     </button>
   );
 }
-

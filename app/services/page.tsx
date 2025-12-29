@@ -1,12 +1,11 @@
 import { 
-  Globe, Code, Megaphone, ShoppingCart, Settings, Smartphone,
-  ArrowRight, CheckCircle, Sparkles, Eye, Users, Zap, Heart
+  Globe, Code, Megaphone,
+  ArrowRight, CheckCircle, Sparkles, Eye, Zap, Heart
 } from "lucide-react";
 import { Section, SectionHeader } from "@/app/components/section";
 import { Button } from "@/app/components/button";
 import { Card } from "@/app/components/card";
 import { CTASection } from "@/app/components/cta-section";
-import Link from "next/link";
 
 const serviceCategories = [
   {
@@ -145,7 +144,7 @@ export default function ServicesPage() {
             Ce que nous faisons
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             Des solutions digitales
             <br />
             <span className="gradient-text">adaptées à vos besoins.</span>
@@ -165,7 +164,7 @@ export default function ServicesPage() {
               <div className={`w-16 h-16 rounded-2xl ${category.iconBg} flex items-center justify-center ${category.iconColor} mb-6`}>
                 {category.icon}
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
                 {category.title}
               </h2>
               <p className="text-foreground-muted text-lg mb-8">
@@ -179,7 +178,7 @@ export default function ServicesPage() {
                       <CheckCircle className="w-4 h-4 text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-white font-medium mb-1">{service.title}</h3>
+                      <h3 className="text-foreground font-medium mb-1">{service.title}</h3>
                       <p className="text-foreground-muted text-sm">{service.description}</p>
                     </div>
                   </div>
@@ -211,7 +210,7 @@ export default function ServicesPage() {
           {sectors.map((sector) => (
             <span
               key={sector}
-              className="px-4 py-2 rounded-full bg-background-card border border-border text-foreground-muted hover:text-white hover:border-primary/50 transition-colors"
+              className="px-4 py-2 rounded-full bg-background-card border border-border text-foreground-muted hover:text-primary hover:border-primary/50 transition-colors"
             >
               {sector}
             </span>
@@ -233,7 +232,7 @@ export default function ServicesPage() {
               <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mx-auto mb-4">
                 {item.icon}
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
               <p className="text-foreground-muted text-sm leading-relaxed">
                 {item.description}
               </p>
@@ -245,11 +244,11 @@ export default function ServicesPage() {
       {/* Approach Summary */}
       <Section background="secondary">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
             Notre approche
           </h2>
           <p className="text-foreground-muted text-lg leading-relaxed mb-8">
-            Chez Moon.innov, nous ne livrons pas simplement des outils digitaux. Nous adoptons une <span className="text-white">approche globale et stratégique</span>, basée sur l&apos;écoute, l&apos;analyse, la co-construction et l&apos;accompagnement durable.
+            Chez Moon.innov, nous ne livrons pas simplement des outils digitaux. Nous adoptons une <span className="text-foreground">approche globale et stratégique</span>, basée sur l&apos;écoute, l&apos;analyse, la co-construction et l&apos;accompagnement durable.
           </p>
           <p className="text-foreground-secondary italic mb-8">
             Chaque projet est pensé comme une solution utile, évolutive et alignée avec la vision du client.

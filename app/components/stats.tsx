@@ -16,7 +16,7 @@ export function Stats({ stats }: StatsProps) {
           className="text-center animate-fade-in"
           style={{ animationDelay: `${index * 0.1}s` }}
         >
-          <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">
+          <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-2">
             {stat.value}
           </div>
           <div className="text-foreground-muted text-sm uppercase tracking-wider">
@@ -27,4 +27,3 @@ export function Stats({ stats }: StatsProps) {
     </div>
   );
 }
-

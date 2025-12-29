@@ -3,6 +3,7 @@ import { Sora, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/app/components/header";
 import { Footer } from "@/app/components/footer";
+import { ThemeProvider } from "@/app/components/theme-provider";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -35,15 +36,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" >
+    <html lang="fr">
       <body
         className={`${sora.variable} ${jetbrainsMono.variable} antialiased bg-background text-foreground`}
       >
-        <Header />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <Footer />
+        <ThemeProvider>
+          <Header />
+          <main className="min-h-screen">
+            {children}
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

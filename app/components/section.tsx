@@ -54,7 +54,7 @@ export function SectionHeader({
           {badge}
         </div>
       )}
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
         {title}
         {titleHighlight && (
           <>
@@ -71,4 +71,3 @@ export function SectionHeader({
     </div>
   );
 }
-

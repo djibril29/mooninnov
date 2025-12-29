@@ -49,7 +49,7 @@ export function ServiceCard({
       <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
         {icon}
       </div>
-      <h3 className="text-lg font-semibold text-white mb-2">{title}</h3>
+      <h3 className="text-lg font-semibold text-foreground mb-2">{title}</h3>
       <p className="text-foreground-muted text-sm leading-relaxed mb-4">
         {description}
       </p>
@@ -126,7 +126,7 @@ export function ProjectCard({
           </div>
         </div>
         <div className="p-5">
-          <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">
+          <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
             {title}
           </h3>
           <p className="text-foreground-muted text-sm leading-relaxed mb-4 line-clamp-2">
@@ -166,7 +166,7 @@ export function TeamCard({ image, name, role, description }: TeamCardProps) {
           style={{ backgroundImage: `url(${image})` }}
         />
       </div>
-      <h3 className="text-lg font-semibold text-white mb-1">{name}</h3>
+      <h3 className="text-lg font-semibold text-foreground mb-1">{name}</h3>
       <p className="text-primary text-sm font-medium mb-3">{role}</p>
       <p className="text-foreground-muted text-sm leading-relaxed">
         {description}
@@ -174,4 +174,3 @@ export function TeamCard({ image, name, role, description }: TeamCardProps) {
     </Card>
   );
 }
-

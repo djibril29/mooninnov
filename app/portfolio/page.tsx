@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Star, ArrowRight, ArrowUpRight, Quote, Sparkles, CheckCircle, ExternalLink } from "lucide-react";
+import { Star, ArrowRight, Quote, Sparkles, CheckCircle, ExternalLink } from "lucide-react";
 import { Section, SectionHeader } from "@/app/components/section";
 import { Button } from "@/app/components/button";
 import { Card } from "@/app/components/card";
@@ -122,7 +122,7 @@ export default function PortfolioPage() {
             Nos Réalisations
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             Projets en cours,
             <br />
             <span className="gradient-text">clients accompagnés.</span>
@@ -142,7 +142,7 @@ export default function PortfolioPage() {
       {/* What We Do */}
       <Section background="secondary">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-2xl font-bold text-white mb-6">Notre accompagnement</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-6">Notre accompagnement</h2>
           <p className="text-foreground-muted mb-8">
             Pour chaque client, nous assurons une gestion globale de leur présence digitale :
           </p>
@@ -185,7 +185,7 @@ export default function PortfolioPage() {
                 </span>
               </div>
               
-              <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+              <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
                 {featuredProject.title}
               </h3>
               
@@ -226,7 +226,7 @@ export default function PortfolioPage() {
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                 activeCategory === category.id
                   ? "bg-primary text-white"
-                  : "bg-background-card border border-border text-foreground-muted hover:text-white hover:border-primary/50"
+                  : "bg-background-card border border-border text-foreground-muted hover:text-primary hover:border-primary/50"
               }`}
             >
               {category.name}
@@ -256,11 +256,11 @@ export default function PortfolioPage() {
                     </span>
                   </div>
                   <div className="absolute bottom-4 left-4">
-                    <p className="text-white font-semibold text-lg">{project.client}</p>
+                    <p className="text-foreground font-semibold text-lg">{project.client}</p>
                   </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-foreground-muted text-sm leading-relaxed mb-4">
@@ -308,11 +308,11 @@ export default function PortfolioPage() {
             <Card key={testimonial.author} className="relative">
               <Quote className="absolute top-6 left-6 w-8 h-8 text-primary/20" />
               <div className="pt-8">
-                <p className="text-white text-lg italic leading-relaxed mb-6">
+                <p className="text-foreground text-lg italic leading-relaxed mb-6">
                   &quot;{testimonial.quote}&quot;
                 </p>
                 <div>
-                  <p className="text-white font-semibold">{testimonial.author}</p>
+                  <p className="text-foreground font-semibold">{testimonial.author}</p>
                   <p className="text-foreground-muted text-sm">{testimonial.role}</p>
                 </div>
               </div>
