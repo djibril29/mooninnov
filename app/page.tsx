@@ -255,16 +255,20 @@ export default function HomePage() {
 
 
       {/* Approach Section */}
-      <Section background="secondary">
+      <Section background="secondary" className="flex flex-col items-center justify-centerß">
         <SectionHeader
           title="Notre approche"
           description="Nous ne livrons pas simplement des outils digitaux. Nous adoptons une approche globale et stratégique."
           centered
         />
-        <ProcessSteps steps={processSteps} />
-        <p className="text-center text-foreground-muted mt-8 max-w-2xl mx-auto">
-          Chaque projet est pensé comme une <span className="text-foreground">solution utile, évolutive et alignée</span> avec la vision du client.
-        </p>
+        <div className="flex flex-col items-center justify-center">
+          <ProcessSteps steps={processSteps} />
+          <p className="text-center text-foreground-muted mt-8 max-w-2xl mx-auto">
+            Chaque projet est pensé comme une <span className="text-foreground">solution utile, évolutive et alignée</span> avec la vision du client.
+          </p>
+
+        </div>
+        
       </Section>
 
     
