@@ -119,14 +119,15 @@ export default function HomePage() {
           
           {/* Main heading */}
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-foreground mb-6 animate-fade-in-delay-1 pt-10">
-           Donnez vie à vos idées 
+          Nous transformons vos idées
             <br />
-            <span className="gradient-text">Grâce à nos solutions digitales.</span>
+            <span className="gradient-text">en solutions digitales, utiles et durables.</span>
           </h1>
           
           {/* Subtitle */}
           <p className="text-foreground-muted text-lg md:text-xl max-w-3xl mx-auto mb-10 animate-fade-in-delay-2">
-            Moon.innov accompagne les PME, entrepreneurs et organisations engagées dans leur transformation digitale pour leur apporter une expertise, de l&apos;innovation et des solutions concrètes, adaptées aux réalités africaines.
+          Parce que derrière chaque projet, il y a des personnes.
+          Moon.innov travaille main dans la main avec les PME, les entrepreneurs et les organisations, dans une approche humaine et collaborative, pour répondre à leurs besoins réels et soutenir leur transformation digitale.
           </p>
           
           {/* CTA Buttons */}
