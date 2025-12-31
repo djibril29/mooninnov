@@ -28,30 +28,30 @@ const contactInfo = [
   {
     icon: <Mail className="w-5 h-5" />,
     label: "Email",
-    value: "contact@moon-innov.com",
+    value: "hadjidjibril@gmail.com",
     subtext: "Réponse sous 24h",
-    href: "mailto:contact@moon-innov.com",
+    href: "mailto:hadjidjibril@gmail.com",
   },
   {
     icon: <Phone className="w-5 h-5" />,
     label: "Téléphone",
-    value: "+221 77 123 45 67",
+    value: "+221 77 195 87 06",
     subtext: "Lun-Ven, 9h-18h",
-    href: "tel:+221771234567",
+    href: "tel:+221771958706",
   },
   {
     icon: <MapPin className="w-5 h-5" />,
     label: "Bureau",
     value: "Dakar, Sénégal",
-    subtext: "Point E",
-    href: "https://maps.google.com/?q=Point+E+Dakar+Senegal",
+    subtext: "",
+    href: "",
   },
 ];
 
 const testimonial = {
   quote: "L'équipe Moon.innov a su nous accompagner avec pédagogie et professionnalisme. Ils ont pris le temps de comprendre nos besoins avant de proposer une solution adaptée.",
-  author: "Fatou N.",
-  role: "Directrice, PME Services",
+  author: "Maimouna Astou Yade",
+  role: "Directrice, J-GEN Women Global Entrepreneurship",
 };
 
 export default function ContactPage() {
