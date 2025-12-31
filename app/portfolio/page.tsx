@@ -16,7 +16,7 @@ const categories = [
 ];
 
 const featuredProject = {
-  image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1200&h=800&fit=crop",
+  image: "/clients/JGEN.png",
   category: "ONG",
   client: "J-GEN Sénégal",
   title: "Plateforme & Communication Digitale",
@@ -33,7 +33,7 @@ const featuredProject = {
 const projects = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop",
+    image: "/clients/aida.png",
     category: "E-commerce",
     categoryColor: "blue" as const,
     client: "Aïda Création",
@@ -45,7 +45,7 @@ const projects = [
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&h=400&fit=crop",
+    image: "/clients/ALLEMAGNE.png",
     category: "E-commerce",
     categoryColor: "purple" as const,
     client: "Allemagne Beauty",
@@ -57,7 +57,7 @@ const projects = [
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&h=400&fit=crop",
+    image: "/clients/btlabs-site.png",
     category: "Site Institutionnel",
     categoryColor: "green" as const,
     client: "BTLabs Consulting",

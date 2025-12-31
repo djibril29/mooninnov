@@ -77,28 +77,31 @@ const processSteps = [
 
 const projects = [
   {
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
+    image: "clients/aida.png",
     category: "E-commerce",
     categoryColor: "blue" as const,
     title: "Boutique en ligne performante",
     description: "Plateforme e-commerce évolutive avec intégration des paiements mobiles locaux.",
     tags: ["E-commerce", "Wave", "Orange Money"],
+    link: "https://aida-creation-8jwl3nmeaxxov91q.builder-preview.com/",
   },
   {
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-    category: "Application Web",
+    image: "clients/btlabs-site.png",
+    category: "Site Institutionnel",
     categoryColor: "green" as const,
-    title: "Outil de gestion PME",
-    description: "Solution logicielle pour la gestion, le suivi et l'automatisation des processus métier.",
-    tags: ["Gestion", "Automatisation"],
+    title: "Cabinet d'Études Environnementales",
+    description: "Site vitrine professionnel pour un cabinet d'études environnementales et sociales. Présence digitale complète et gestion de la communication.",
+    tags: ["Site Web", "Consulting", "Environnement"],
+    link: "https://btlabs-consulting.com/",
   },
   {
-    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop",
-    category: "Site Vitrine",
+    image: "clients/JGEN.png",
+    category: "ONG",
     categoryColor: "purple" as const,
-    title: "Présence digitale professionnelle",
-    description: "Site vitrine sur mesure pour structurer la présence numérique d'une entreprise.",
-    tags: ["Site Web", "SEO"],
+    title: "Plateforme & Communication Digitale",
+    description: "J-GEN Women Global Entrepreneurship est une association féministe qui œuvre pour l'élimination des violences basées sur le genre et la promotion des droits des femmes au Sénégal. Nous assurons la gestion globale de leur présence digitale : site web institutionnel, stratégie de communication, gestion des réseaux sociaux et création de contenus.",
+    tags: ["Site Web", "Communication", "ONG"],
+    link: "https://www.jgen.sn/",
   },
 ];
 
@@ -142,6 +145,39 @@ export default function HomePage() {
         </div>
       
       </section>
+
+       {/* Projects Section */}
+       <Section background="secondary">
+        <div className="flex items-end justify-between mb-12">
+          <SectionHeader
+            title="Nos réalisations"
+            description="Des solutions concrètes déployées pour nos clients."
+          />
+          <Link
+            href="/portfolio"
+            className="hidden md:inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
+          >
+            Voir tous les projets
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project) => (
+            <ProjectCard key={project.title} {...project} />
+          ))}
+        </div>
+
+        <div className="mt-8 text-center md:hidden">
+          <Link
+            href="/portfolio"
+            className="inline-flex items-center gap-2 text-primary font-medium"
+          >
+            Voir tous les projets
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </Section>
 
      
 
@@ -209,38 +245,7 @@ export default function HomePage() {
       </Section>
 
 
-       {/* Projects Section */}
-       <Section background="secondary">
-        <div className="flex items-end justify-between mb-12">
-          <SectionHeader
-            title="Nos réalisations"
-            description="Des solutions concrètes déployées pour nos clients."
-          />
-          <Link
-            href="/portfolio"
-            className="hidden md:inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
-          >
-            Voir tous les projets
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
-          ))}
-        </div>
-
-        <div className="mt-8 text-center md:hidden">
-          <Link
-            href="/portfolio"
-            className="inline-flex items-center gap-2 text-primary font-medium"
-          >
-            Voir tous les projets
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </Section>
+      
 
        {/* Trusted By */}
        <Section background="secondary">
