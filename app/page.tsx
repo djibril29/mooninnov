@@ -141,7 +141,7 @@ export default function HomePage() {
             </Button>
           </div>
         </div>
-        <div className="flex justify-center items-center mt-10">
+        <div className="flex justify-center items-center mt-10 z-10">
           <Image src="/clients/moon.png" alt="Hero Wave" width={1000} height={1000} priority />
         </div>
       
